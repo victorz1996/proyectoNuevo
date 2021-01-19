@@ -11,13 +11,26 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    bodyAttrs: {
+      class: '' // Add `white-content` class here to enable "white" mode.
+    }
   },
+  router: {
+    linkExactActiveClass: 'active'
+  },
+  loading: { color: '#fff' },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    'assets/css/demo.css',
+    'assets/css/nucleo-icons.css',
+    'assets/sass/black-dashboard.scss'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    `~/plugins/dashboard-plugin.js`
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -25,16 +38,33 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/pwa',
+    'nuxt-i18n',
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en.js'
+      },
+      {
+        code: 'ar',
+        file: 'ar.js'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
