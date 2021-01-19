@@ -1,8 +1,9 @@
 module.exports = {
   "sidebar": {
-    "title": "Creative Tim",
-    "shortTitle": "CT",
-    "dashboard": "Dashboard",
+    "store": "Store",
+    "title": "VideoJuegos",
+    "shortTitle": "VT",
+    "dashboard": "Inicio",
     "pages": "Pages",
     "pricing": "Pricing",
     "rtl": "RTL Support",

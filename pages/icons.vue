@@ -1,26 +1,6 @@
 <template>
-<div>
- <ul>
-    <li v-for="item of items" :key="item.id">{{item.name}}</li>
-  </ul>
-</div>
- 
+  <div>
+    <h3>Iconos</h3>
+    <i class="tim-icons icon-bullet-list-67"></i>
+  </div>
 </template>
-<script>
-import axios from "axios";
-export default {
-  data:()=>({
-    items:[]
-  }),
-  mounted(){
-    this.datos()
-  },
-  methods:{
-    async datos(){
-      const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-      console.log(res)
-      this.items = res.data
-    }
-  }
-}
-</script>

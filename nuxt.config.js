@@ -37,12 +37,19 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/fontawesome'
   ],
+  fontawesome: {
+    component: 'fa',
+    icons:{
+      solid: true,
+      // brands: true
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-fontawesome',
     '@nuxtjs/pwa',
     'nuxt-i18n',
     // https://go.nuxtjs.dev/bootstrap
@@ -57,13 +64,13 @@ export default {
         file: 'en.js'
       },
       {
-        code: 'ar',
-        file: 'ar.js'
+        code: 'es',
+        file: 'es.js'
       }
     ],
     lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'en',
+    defaultLocale: 'es',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
