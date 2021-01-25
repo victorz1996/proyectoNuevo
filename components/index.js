@@ -15,9 +15,7 @@ import Card from './Cards/Card.vue';
 import BaseNav from './Navbar/BaseNav';
 import NavbarToggleButton from './Navbar/NavbarToggleButton';
 
-import Breadcrumb from './Breadcrumb/Breadcrumb.vue';
-import BreadcrumbItem from './Breadcrumb/BreadcrumbItem.vue';
-import RouteBreadCrumb from './Breadcrumb/RouteBreadcrumb.vue';
+
 import Modal from './Modal.vue';
 import LoadingPanel from './LoadingPanel.vue';
 
@@ -42,9 +40,6 @@ export {
   SidebarPlugin,
   BaseNav,
   NavbarToggleButton,
-  Breadcrumb,
-  BreadcrumbItem,
-  RouteBreadCrumb,
   Modal,
   BaseButton,
   LoadingPanel

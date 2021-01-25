@@ -112,3 +112,38 @@
 @import "dashboard/custom/cards/card-user";
 @import "dashboard/custom/cards/card-profile";
 @import "dashboard/custom/cards/card-plain";
+
+.vermas {
+    cursor:pointer;
+    .show {
+      display:none;
+    }
+  }
+  .vermas:hover {
+    cursor: pointer;
+    .show {
+      display: block;
+    }
+  }
+  .toolip-hover {
+    background-color: rgb(38, 180, 38);
+    color: black;
+    list-style: none;
+    padding: 7px 10px 7px 15px;
+    margin: 0 0;
+    position: absolute;
+    min-width: 17%;
+    width: auto;
+    border: 1px solid white;
+    transform: translate3d(-7px, 7px, 0px);
+    /* top: 0px; */
+    /* left: 0px; */
+    will-change: transform;
+    z-index: 1;
+    border-radius: 11px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+      0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+      0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+      0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+    margin: 0.125rem;
+  }

@@ -15,14 +15,6 @@
           }"
         >
         </sidebar-item>
-        <!-- <sidebar-item
-          :link="{
-            name: $t('sidebar.icons'),
-            icon: 'tim-icons icon-atom',
-            path: '/icons',
-          }"
-        >
-        </sidebar-item> -->
         <sidebar-item
           :link="{
             name: $t('sidebar.maps'),
@@ -31,16 +23,6 @@
           }"
         >
         </sidebar-item>
-
-        <!-- <sidebar-item
-          :link="{
-            name: $t('sidebar.notifications'),
-            icon: 'tim-icons icon-bell-55',
-            path: '/notifications',
-          }"
-        >
-        </sidebar-item> -->
-
         <sidebar-item
           :link="{
             name: $t('sidebar.userProfile'),
@@ -49,15 +31,6 @@
           }"
         >
         </sidebar-item>
-
-        <!-- <sidebar-item
-          :link="{
-            name: $t('sidebar.regularTables'),
-            icon: 'tim-icons icon-puzzle-10',
-            path: '/regular',
-          }"
-        ></sidebar-item> -->
-
         <sidebar-item
           :link="{
             name: $t('sidebar.store'),
@@ -65,35 +38,17 @@
             path: '/tienda',
           }"
         ></sidebar-item>
-
-        <!-- <sidebar-item
-          :link="{
-            name: $t('sidebar.rtl'),
-            icon: 'tim-icons icon-world',
-            path: localePath('/rtl', 'ar') }"
-        ></sidebar-item>
-
-        <li class="active-pro">
-          <a href="https://www.creative-tim.com/product/nuxt-black-dashboard-pro" target="_blank">
-            <i class="tim-icons icon-spaceship"></i>
-            <p>Upgrade to PRO</p>
-          </a>
-        </li> -->
       </template>
     </side-bar>
-    <!--Share plugin (for demo purposes). You can remove it if don't plan on using it-->
-    <!-- <sidebar-share :background-color.sync="sidebarBackground"> </sidebar-share> -->
     <div class="main-panel" :data="sidebarBackground">
       <dashboard-navbar></dashboard-navbar>
       <nuxt name="header"></nuxt>
 
       <div :class="{ content: !isFullScreenRoute }" @click="toggleSidebar">
         <zoom-center-transition :duration="200" mode="out-in">
-          <!-- your content here -->
           <nuxt></nuxt>
         </zoom-center-transition>
       </div>
-      <content-footer v-if="!isFullScreenRoute"></content-footer>
     </div>
   </div>
 </template>
@@ -110,7 +65,6 @@ function initScrollbar(className) {
   if (hasElement(className)) {
     new PerfectScrollbar(`.${className}`)
   } else {
-    // try to init it later in case this component is loaded async
     setTimeout(() => {
       initScrollbar(className)
     }, 100)
@@ -118,15 +72,11 @@ function initScrollbar(className) {
 }
 
 import DashboardNavbar from '@/components/Layout/DashboardNavbar.vue'
-import ContentFooter from '@/components/Layout/ContentFooter.vue'
-import DashboardContent from '@/components/Layout/Content.vue'
 import { SlideYDownTransition, ZoomCenterTransition } from 'vue2-transitions'
 
 export default {
   components: {
     DashboardNavbar,
-    ContentFooter,
-    DashboardContent,
     SlideYDownTransition,
     ZoomCenterTransition,
     SidebarShare,

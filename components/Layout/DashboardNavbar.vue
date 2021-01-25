@@ -92,19 +92,16 @@
         <template
           slot="title"
         >
-          <div class="photo"><img src="img/mike.jpg" /></div>
+          <div class="photo"><img src="img/user.png" /></div>
           <b class="caret d-none d-lg-block d-xl-block"></b>
           <p class="d-lg-none">Log out</p>
         </template>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Profile</a>
-        </li>
-        <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Settings</a>
+          <a href="#" class="nav-item dropdown-item">Cambiar clave</a>
         </li>
         <div class="dropdown-divider"></div>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Log out</a>
+          <a @click="logout" class="nav-item dropdown-item">Salir</a>
         </li>
       </base-dropdown>
     </ul>
@@ -142,6 +139,9 @@ export default {
     };
   },
   methods: {
+    async logout(){
+      await this.$auth.logout()
+    },
     capitalizeFirstLetter(string) {
       if (!string || typeof string !== 'string') {
         return ''
