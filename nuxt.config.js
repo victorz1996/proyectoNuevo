@@ -30,7 +30,11 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [`~/plugins/dashboard-plugin.js`, '~/plugins/axios'],
+  plugins: [
+    `~/plugins/dashboard-plugin.js`,
+    '~/plugins/axios.js',
+    { src: '~/plugins/leaflet.js', ssr: false },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -53,6 +57,7 @@ export default {
     'nuxt-i18n',
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    'nuxt-leaflet',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],

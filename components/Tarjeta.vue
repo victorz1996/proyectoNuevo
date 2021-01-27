@@ -5,6 +5,7 @@
       :img-src="item.productImage"
       img-alt="Image"
       img-top
+      img-height="200px"
       tag="article"
       style="max-width: 20rem"
       class="mb-2"
